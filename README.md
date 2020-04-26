@@ -44,15 +44,15 @@ eureka.client.serviceUrl.defaultZone: http://127.0.0.1:19999/eureka/
 ```  
 SpringBootApplication.java
 ```bash
-        @EnableEurekaServer
-        @SpringBootApplication
-        public class DemoApplication {
+@EnableEurekaServer
+@SpringBootApplication
+public class DemoApplication {
 
-                public static void main(String[] args) {
-                        SpringApplication.run(DemoApplication.class, args);
-                }
-
+        public static void main(String[] args) {
+                SpringApplication.run(DemoApplication.class, args);
         }
+
+}
 ```
 # demo-eureka-client
 pom.xml
@@ -95,13 +95,12 @@ eureka.client.serviceUrl.defaultZone: http://localhost:19999/eureka/
 ``` 
 SpringBootApplication.java
 ```bash
-        @EnableEurekaClient
-        @SpringBootApplication
-        public class DemoApplication {
+@EnableEurekaClient
+@SpringBootApplication
+public class DemoApplication {
 
-                public static void main(String[] args) {
-                        SpringApplication.run(DemoApplication.class, args);
-                }
-
+        public static void main(String[] args) {
+                SpringApplication.run(DemoApplication.class, args);
         }
+}
 ```
