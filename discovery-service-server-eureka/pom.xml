@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     
-    <groupId>pe.gob.susalud</groupId>
+    <groupId>com.example.demo</groupId>
     <artifactId>discovery-service-server-eureka</artifactId>
     <version>1.0.0</version>
     <name>discovery-service-server-eureka</name>
