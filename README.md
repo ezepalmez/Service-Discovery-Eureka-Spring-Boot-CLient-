@@ -28,20 +28,32 @@ pom.xml
         </dependencies>
     </dependencyManagement>
  ```   
- application.properties
+application.properties
 ```bash
-        # Spring config
-        spring.application.name:discovery-service
-        eureka.instance.hostname=127.0.0.1 
+# Spring config
+spring.application.name:discovery-service
+eureka.instance.hostname=127.0.0.1 
 
-        # Eureka config
-        eureka.client.register-with-eureka=false
-        eureka.client.fetch-registry=false
-        eureka.environment=prod
+# Eureka config
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
+eureka.environment=prod
 
-        # deploy Server 
-        eureka.client.serviceUrl.defaultZone: http://127.0.0.1:19999/eureka/
+# deploy Server 
+eureka.client.serviceUrl.defaultZone: http://127.0.0.1:19999/eureka/
 ```  
+SpringBootApplication.java
+```bash
+        @EnableEurekaServer
+        @SpringBootApplication
+        public class DemoApplication {
+
+                public static void main(String[] args) {
+                        SpringApplication.run(DemoApplication.class, args);
+                }
+
+        }
+```
 # demo-eureka-client
 pom.xml
 ```bash
@@ -73,10 +85,23 @@ pom.xml
         </dependencies>
     </dependencyManagement>
 ```
+application.properties
 ```bash
-        # Spring config
-        spring.application.name=demo-eureka-client
+# Spring config
+spring.application.name=demo-eureka-client
 
-        # Eureka server
-        eureka.client.serviceUrl.defaultZone: http://localhost:19999/eureka/
+# Eureka server
+eureka.client.serviceUrl.defaultZone: http://localhost:19999/eureka/
 ``` 
+SpringBootApplication.java
+```bash
+        @EnableEurekaClient
+        @SpringBootApplication
+        public class DemoApplication {
+
+                public static void main(String[] args) {
+                        SpringApplication.run(DemoApplication.class, args);
+                }
+
+        }
+```
