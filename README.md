@@ -28,7 +28,7 @@ Service Discovery-Eureka &amp; Spring Boot-Client
         </dependencies>
     </dependencyManagement>
  ```   
-application.properties
+- application.properties
 ```bash
 # Spring config
 spring.application.name:discovery-service
@@ -42,7 +42,7 @@ eureka.environment=prod
 # deploy Server 
 eureka.client.serviceUrl.defaultZone: http://127.0.0.1:19999/eureka/
 ```  
-SpringBootApplication.java
+- SpringBootApplication.java
 ```bash
 @EnableEurekaServer
 @SpringBootApplication
@@ -55,7 +55,7 @@ public class DemoApplication {
 }
 ```
 # demo-eureka-client
-pom.xml
+- pom.xml
 ```bash
 <properties>
         <java.version>1.8</java.version>
@@ -85,7 +85,7 @@ pom.xml
         </dependencies>
     </dependencyManagement>
 ```
-application.properties
+- application.properties
 ```bash
 # Spring config
 spring.application.name=demo-eureka-client
@@ -93,7 +93,7 @@ spring.application.name=demo-eureka-client
 # Eureka server
 eureka.client.serviceUrl.defaultZone: http://localhost:19999/eureka/
 ``` 
-SpringBootApplication.java
+- SpringBootApplication.java
 ```bash
 @EnableEurekaClient
 @SpringBootApplication
