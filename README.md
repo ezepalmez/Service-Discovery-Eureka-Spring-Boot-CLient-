@@ -28,6 +28,20 @@ pom.xml
         </dependencies>
     </dependencyManagement>
  ```   
+ application.properties
+```bash
+        # Spring config
+        spring.application.name:discovery-service
+        eureka.instance.hostname=127.0.0.1 
+
+        # Eureka config
+        eureka.client.register-with-eureka=false
+        eureka.client.fetch-registry=false
+        eureka.environment=prod
+
+        # deploy Server 
+        eureka.client.serviceUrl.defaultZone: http://127.0.0.1:19999/eureka/
+```  
 # demo-eureka-client
 pom.xml
 ```bash
@@ -59,3 +73,10 @@ pom.xml
         </dependencies>
     </dependencyManagement>
 ```
+```bash
+        # Spring config
+        spring.application.name=demo-eureka-client
+
+        # Eureka server
+        eureka.client.serviceUrl.defaultZone: http://localhost:19999/eureka/
+``` 
