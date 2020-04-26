@@ -2,7 +2,7 @@
 Service Discovery-Eureka &amp; Spring Boot-Client
 
 # discovery-service-server-eureka
-- Website
+- pom.xml
 ```bash
 <properties>
         <java.version>1.8</java.version>
